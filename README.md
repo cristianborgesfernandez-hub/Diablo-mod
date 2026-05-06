@@ -9,7 +9,7 @@
   **El Bot Definitivo para WhatsApp con Dashboard en Tiempo Real**
 
   <p>
-    <a href="https://github.com/melodiabl/OguriCap-Bot/commits/master"><img src="https://img.shields.io/github/last-commit/melodiabl/OguriCap-Bot?color=25d366&style=for-the-badge&logo=github"></a>
+    <a href="https://github.com/melodiabl/OguriCap-Bot/commits/main"><img src="https://img.shields.io/github/last-commit/melodiabl/OguriCap-Bot?color=25d366&style=for-the-badge&logo=github"></a>
     <a href="https://github.com/melodiabl/OguriCap-Bot/stargazers"><img src="https://img.shields.io/github/stars/melodiabl/OguriCap-Bot?color=2dd4bf&style=for-the-badge&logo=apache-spark"></a>
     <a href="https://github.com/melodiabl/OguriCap-Bot/network/members"><img src="https://img.shields.io/github/forks/melodiabl/OguriCap-Bot?color=ff4d8d&style=for-the-badge&logo=git"></a>
   </p>
