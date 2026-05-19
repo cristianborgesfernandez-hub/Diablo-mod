@@ -1,6 +1,6 @@
 {
-  "name": "Oguri Bot Panel",
-  "short_name": "Oguri Bot",
+  "name": "Diablo mod Panel",
+  "short_name": "Diablo mod",
   "description": "Panel de administración para WhatsApp Bot",
   "start_url": "/",
   "display": "standalone",
