@@ -1,8 +1,8 @@
-# Fork actualizado por @melodiabl - Código original desarrollado por @gata_dios 
+# Fork actualizado por Diablomod - Código original desarrollado por @gata_dios 
 
 #!/data/data/com.termux/files/usr/bin/bash 
-BOT_DIR="OguriCap-Bot"  
-BOT_REPO="https://github.com/melodiabl/$BOT_DIR"
+BOT_DIR="Diablo mod"  
+BOT_REPO="https://github.com/cristianborgesfernandez-hub/$BOT_DIR"
 DB_FILE="database.json"
 
 GREEN='\033[32m'
