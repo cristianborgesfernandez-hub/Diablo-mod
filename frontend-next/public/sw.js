@@ -1,6 +1,6 @@
-// Service Worker para Push Notifications de Oguri Bot Panel
-const CACHE_NAME = 'oguricap-panel-v4';
-const STATIC_CACHE = 'oguricap-static-v4';
+// Service Worker para Push Notifications de Diablo mod Panel
+const CACHE_NAME = 'diablocap-panel-v4';
+const STATIC_CACHE = 'diablocap-static-v4';
 
 self.addEventListener('install', (event) => {
   self.skipWaiting();
@@ -31,12 +31,12 @@ self.addEventListener('push', (event) => {
     data = event.data ? event.data.json() : {};
   } catch {
     data = {
-      title: 'Oguri Bot',
+      title: 'Diablo mod',
       body: event.data ? event.data.text() : 'Nueva notificación',
     };
   }
 
-  const title = data.title || data.titulo || 'Oguri Bot';
+  const title = data.title || data.titulo || 'Diablo mod';
   const rawBody = data.body || data.message || data.mensaje || 'Nueva notificación';
   const body = String(rawBody || '').length > 180
     ? `${String(rawBody).slice(0, 179).trimEnd()}…`
