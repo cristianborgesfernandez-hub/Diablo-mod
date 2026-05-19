@@ -13,7 +13,7 @@ type PreferencesContextValue = {
   togglePreference: (key: keyof Preferences) => void;
 };
 
-const STORAGE_KEY = 'oguricap:preferences';
+const STORAGE_KEY = 'diablocap:preferences';
 const DEFAULT_PREFERENCES: Preferences = {
   soundEnabled: false,
   hapticsEnabled: false,
