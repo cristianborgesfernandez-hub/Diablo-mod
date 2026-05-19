@@ -1,5 +1,5 @@
 -- ============================================
--- Tabla de Notificaciones para OguriCap Bot
+-- Tabla de Notificaciones para Diablo mod
 -- ============================================
 
 CREATE TABLE IF NOT EXISTS notifications (
