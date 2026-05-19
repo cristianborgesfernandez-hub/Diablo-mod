@@ -8,10 +8,10 @@ export interface OguriLogoProps {
 }
 
 /**
- * OguriCap-inspired minimal logo: circular face + twin "ear" shapes.
+ * DiabloCap-inspired minimal logo: circular face + twin "ear" shapes.
  * Uses currentColor so it adapts to the surrounding text color.
  */
-export const OguriLogo: React.FC<OguriLogoProps> = ({ className }) => {
+export const DiabloLogo: React.FC<OguriLogoProps> = ({ className }) => {
   return (
     <svg
       viewBox="0 0 64 64"
