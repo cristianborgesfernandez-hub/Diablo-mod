@@ -4,7 +4,7 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 
 type AuraType = 'purple' | 'phantom' | 'gold' | 'cyan';
 
-interface OguriThemeContextType {
+interface DiabloThemeContextType {
   isInZone: boolean;
   setIsInZone: (val: boolean) => void;
   currentAura: AuraType;
@@ -12,20 +12,20 @@ interface OguriThemeContextType {
   toggleZone: () => void;
 }
 
-const OguriThemeContext = createContext<OguriThemeContextType | undefined>(undefined);
+const DiabloThemeContext = createContext<OguriThemeContextType | undefined>(undefined);
 
-export function OguriThemeProvider({ children }: { children: React.ReactNode }) {
+export function DiabloThemeProvider({ children }: { children: React.ReactNode }) {
   const [isInZone, setIsInZone] = useState(false);
   const [currentAura, setCurrentAura] = useState<AuraType>('purple');
 
   // Persistir aura en localStorage
   useEffect(() => {
-    const savedAura = localStorage.getItem('oguri-aura') as AuraType;
+    const savedAura = localStorage.getItem('diablo-aura') as AuraType;
     if (savedAura) setCurrentAura(savedAura);
   }, []);
 
   useEffect(() => {
-    localStorage.setItem('oguri-aura', currentAura);
+    localStorage.setItem('diablo-aura', currentAura);
     // Aplicar clase al body para estilos globales
     document.body.className = document.body.className.replace(/aura-\w+/g, '').trim();
     document.body.classList.add(`aura-${currentAura}`);
@@ -40,16 +40,16 @@ export function OguriThemeProvider({ children }: { children: React.ReactNode }) 
   const toggleZone = () => setIsInZone(prev => !prev);
 
   return (
-    <OguriThemeContext.Provider value={{ isInZone, setIsInZone, currentAura, setCurrentAura, toggleZone }}>
+    <DiabloThemeContext.Provider value={{ isInZone, setIsInZone, currentAura, setCurrentAura, toggleZone }}>
       {children}
-    </OguriThemeContext.Provider>
+    </DiabloThemeContext.Provider>
   );
 }
 
-export function useOguriTheme() {
-  const context = useContext(OguriThemeContext);
+export function useDiabloTheme() {
+  const context = useContext(DiabloThemeContext);
   if (context === undefined) {
-    throw new Error('useOguriTheme must be used within an OguriThemeProvider');
+    throw new Error('useDiabloTheme must be used within an DiabloThemeProvider');
   }
   return context;
 }
