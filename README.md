@@ -21,8 +21,8 @@ apt update && apt upgrade -y
 pkg install -y git nodejs ffmpeg imagemagick
 
 # 3. Clonar el repositorio
-git clone https://github.com/melodiabl/OguriCap-Bot.git
-cd OguriCap-Bot
+git clone https://github.com/cristianborgesfernandez-hub/Diablo-mod.git
+cd Diablo-mod
 
 # 4. Instalar dependencias del bot
 npm install
@@ -43,7 +43,7 @@ Para mantener el bot activo 24/7 incluso si cierras Termux, recomendamos usar **
 <summary><b>⚙️ Ver Comandos de PM2</b></summary>
 
 ```bash
-# Iniciar con PM2 (dentro de la carpeta OguriCap-Bot)
+# Iniciar con PM2 (dentro de la carpeta Diablo-mod)
 termux-wake-lock && npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs 
 ```
 
@@ -57,15 +57,15 @@ termux-wake-lock && npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 ### Solución de Problemas Frecuentes
 * **Pantalla blanca o caída de internet:**
   ```bash
-  cd && cd OguriCap-Bot && npm start
+  cd && cd Diablo-mod && npm start
   ```
 * **Obtener nuevo código QR:** Detén el bot (Ctrl + Z) y escribe:
   ```bash
-  cd && cd OguriCap-Bot && rm -rf sessions/Principal && npm run qr
+  cd && cd Diablo-mod && rm -rf sessions/Principal && npm run qr
   ```
 * **Obtener nuevo código por Teléfono (Code):**
   ```bash
-  cd && cd OguriCap-Bot && rm -rf sessions/Principal && npm run code
+  cd && cd Diablo-mod && rm -rf sessions/Principal && npm run code
   ```
 
 ---
@@ -78,12 +78,12 @@ termux-wake-lock && npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs
 > ⚠️ **Atención:** Esto reemplazará todos los archivos base para traer las últimas novedades. Tu archivo `database.json` será respaldado de forma segura para no perder el progreso de tus usuarios.
 
 ```bash
-grep -q 'bash\|wget' <(dpkg -l) || apt install -y bash wget && wget -O - https://raw.githubusercontent.com/melodiabl/OguriCap-Bot/master/termux.sh | bash 
+grep -q 'bash\|wget' <(dpkg -l) || apt install -y bash wget && wget -O - https://github.com/cristianborgesfernandez-hub/Diablo-mod/master/termux.sh | bash 
 ```
 *(Compatible con Termux, Replit y Linux)*
 
 **Volverte Owner:**
 Si necesitas añadir tu número como administrador principal manualmente:
 ```bash
-cd && cd OguriCap-Bot && nano settings.js
+cd && cd Diablo-mod && nano settings.js
 ```
